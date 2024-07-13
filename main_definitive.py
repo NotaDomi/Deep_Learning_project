@@ -1,5 +1,4 @@
 import networkx as nx
-import numpy as np
 import torch
 import torch.nn.functional as F
 from torch_geometric.nn import GCNConv
@@ -16,7 +15,6 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Impostazione del seed per la riproducibilità dei risultati
 seed = 42
-np.random.seed(seed)
 torch.manual_seed(seed)
 
 # Caricamento del grafo dal dataset scaricato
