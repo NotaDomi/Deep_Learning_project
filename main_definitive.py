@@ -58,7 +58,7 @@ data.test_mask = torch.tensor([(i in test_mask) for i in range(data.num_nodes)],
 
 
 # Definizione della GCN che verrà utilizzata:
-# 3 strati convoluzionali, con una funzione di attivazione relu tra lo strato 1->2, 2->3 e softmax dopo lo strato 3
+# 3 strati convoluzionali, con una funzione di attivazione relu tra lo strato 1->2, 2->3 e log softmax dopo lo strato 3
 # per ottenere la predizione finale. Tra gli strati 1->2 e 2->3 viene anche applicata la regolarizzazione con dropout
 class GCN(torch.nn.Module):
     def __init__(self, in_channels, hidden_channels, out_channels):
